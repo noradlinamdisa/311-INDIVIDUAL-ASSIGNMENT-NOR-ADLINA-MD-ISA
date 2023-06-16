@@ -1,0 +1,115 @@
+<html>
+<head><title> TEMPLATE </title>
+<link href="ASSEST/CSS/style.css" rel="stylesheet"> </head>
+<a name="Top_Page">
+</a>
+<body> 
+
+
+
+<ul>
+  <li><a class="a href"="index.html">Home</a></li>
+  <li><a href="About_me.html">About me</a></li>
+  <li><a href="Family.html">Family</a></li>
+  <li><a href="Education.html">Education</a></li>
+  <li><a href="Lifestyle.html">Lifestyle</a></li>
+  <li><a href="Gallery.html">Gallery</a></li>
+</ul>
+
+<br><br>
+
+<!--- JavaScript--->
+<center><br>
+<!--- CSS---> 
+<div id="clock">8:10:45</div>
+<!--- link current time from JavaScript---> 
+ <script src="clock2.js"></script>
+
+<br<br><br>
+
+<center>
+<b><marquee><font size="70%" color="black"> WELCOME TO MY WEBSITE </font></marquee><b>
+</center>
+
+<br><br<br><br>
+
+Hello! My name is Adlina. If you want to know me well, do visit my personal website. I hope that you enjoy reading about myself! Thank youuu <3 
+<br>
+If anything happen, you can contact me at...
+<br<br><br<br><br>
+<br<br><br<br><br>
+
+<!---contact--->
+<br<br><br>
+<a href="https://instagram.com/adlinamdisa" target="_blank">
+<img src="ASSEST/ICON/IG.png" width="10%" align="center">
+
+<a href="http://www.wasap.my/60137334241" target="_blank">
+<img src="ASSEST/ICON/WS.png" width="7%" align="center">
+
+<br><br>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<br>
+
+<script> setInterval(showTime, 1000);
+function showTime() {
+	let time = new Date();
+	let hour = time.getHours();
+	let min = time.getMinutes();
+	let sec = time.getSeconds();
+	am_pm = "AM";
+
+	if (hour > 12) {
+		hour -= 12;
+		am_pm = "PM";
+	}
+	if (hour == 0) {
+		hr = 12;
+		am_pm = "AM";
+	}
+
+	hour = hour < 10 ? "0" + hour : hour;
+	min = min < 10 ? "0" + min : min;
+	sec = sec < 10 ? "0" + sec : sec;
+
+	let currentTime = hour + ":"
+			+ min + ":" + sec + am_pm;
+
+	document.getElementById("clock")
+			.innerHTML = currentTime;
+}
+showTime();
+</script>
+
+<a href="#Top_Page"> <img src="ASSEST/ICON/arroww.png" width="75px" align="right"></a>
+
+<br><br><br><br>
+
+<!--- FOOTER START --->
+<div class="footer">
+<p>THIS WEBSITE IS FOR IMD311 INDIVIDUAL ASSIGNMENT PURPOSES @adlinaisa</p>
+</div>
+
+</body>
+</html>
